@@ -9,5 +9,20 @@
 				<li><a href="{{ "/blog" | prepend: site.baseurl}}">About Me</a></li>
 			</ul>
 		</nav>
+		<button class="hamburger hamburger--collapse is-active" type="button">
+			<span class="hamburger-box">
+				<span class="hamburger-inner"></span>
+			</span>
+		</button>
+		<script>
+			// Look for .hamburger
+			var hamburger = document.querySelector(".hamburger");
+			// On click
+			hamburger.addEventListener("click", function() {
+			// Toggle class "is-active"
+			hamburger.classList.toggle("is-active");
+				// Do something else, like open/close menu
+			});
+		</script>
 	</div>
 </aside>
