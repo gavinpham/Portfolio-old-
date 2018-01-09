@@ -2,8 +2,9 @@
 // ==================================================
 .hamburger {
   padding: $hamburger-padding-y $hamburger-padding-x;
-  display: inline-block;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 
   transition-property: opacity, filter;
   transition-duration: $hamburger-hover-transition-duration;
@@ -17,6 +18,7 @@
   border: 0;
   margin: 0;
   overflow: visible;
+  outline: none;
 
   &:hover {
     @if $hamburger-hover-use-filter == true {
@@ -66,4 +68,10 @@
   &::after {
     bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
   }
+}
+
+.hamburger-label {
+  padding-right: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
 }

@@ -50,20 +50,6 @@ time {
 	color: #898989;
 }
 
-.container {
-	margin-left: 100px;
-	margin-right: 100px;
-}
-
-/* Responsively Scale the Container */
-@media (max-width: 960px){
-	.container {
-		margin-left: 25px;
-		margin-left: 25px;
-	}
-}
-
-
 /* Fixed Navigation Bar */
 
 aside {
@@ -86,12 +72,14 @@ aside {
 			padding: 0;
 			list-style: none;
 			display: flex;
-			justify-content: space-between;
+			flex-direction: column;
 				li {
+					display: flex;
+					flex-direction: row-reverse;
 					a {
-						padding: 25px;
+						padding: 20px;
 						text-decoration: none;
-						display: block;
+						display: flex;
 						font-family: $font-style;
 						line-height: 20px;
 						box-shadow: 0;
@@ -127,3 +115,24 @@ footer {
 .aligncenter {
 	align-items: center;
 }
+
+.container {
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+#menu {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+/* Responsively Scale the Container */
+@media (max-width: 960px){
+	.container {
+		margin-left: 25px;
+		margin-right: 25px;
+	}
+}
+
+
