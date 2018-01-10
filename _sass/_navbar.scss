@@ -13,7 +13,7 @@
   }
 }
 
-@mixin animation ($delay, $duration, $animation, $timing: cubic-bezier(0.1, 0.7, 1.0, 0.1), $direction: forward, $fillmode: forwards) {
+@mixin animation ($delay, $duration, $animation, $timing: ease, $direction: forward, $fillmode: forwards) {
     -webkit-animation-delay: $delay;
     -webkit-animation-duration: $duration;
     -webkit-animation-name: $animation;
@@ -59,6 +59,7 @@
 @include keyframes(animation-appear){
     from {
         opacity: 0;
+        transform: translate(30px);
     }
     to {
         opacity: 1;
@@ -71,6 +72,7 @@
     }
     to {
         opacity: 0;
+        transform: translate(30px);
     }
 }
 
@@ -80,21 +82,22 @@
 }
 
 .nav-option {
+    overflow: visible;
     opacity: 0;
 }
 
 .animation-collapse-menu{
-  @include animation(0, 0.4s, animation-collapse-menu, ease);
+  @include animation(0, 0.4s, animation-collapse-menu);
 }
 
 .animation-expand-menu{
-  @include animation(0, 0.4s, animation-expand-menu, ease);
+  @include animation(0, 0.4s, animation-expand-menu);
 }
 
 .animation-appear{
-  @include animation(0, 0.7s, animation-appear, ease);
+  @include animation(0, 0.4s, animation-appear);
 }
 
 .animation-disappear{
-  @include animation(0, 0.4s, animation-disappear, ease);
+  @include animation(0, 0.2s, animation-disappear);
 }

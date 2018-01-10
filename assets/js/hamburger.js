@@ -14,7 +14,7 @@ function toggleNavigationVisible(){
 		for (var i = nav_options.length - 1; i >= 0; i--){
 			setTimeout((i) => {
 				nav_options[i].classList.replace(animation_appear, animation_disappear);
-			}, i * delay, i);
+			}, (nav_options.length - 1 - i) * delay, i);
 		}
 		nav.classList.replace(animation_in, animation_out);
 	} else if (nav.classList.contains(animation_out)) {	
