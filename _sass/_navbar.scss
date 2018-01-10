@@ -1,0 +1,103 @@
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@mixin animation ($delay, $duration, $animation, $timing: ease, $direction: forward, $fillmode: forwards) {
+    -webkit-animation-delay: $delay;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-name: $animation;
+    -webkit-animation-timing-function: $timing;
+    -webkit-animation-fill-mode: $fillmode;
+    -webkit-animation-direction: $direction;
+ 
+    -moz-animation-delay: $delay;
+    -moz-animation-duration: $duration;
+    -moz-animation-name: $animation;
+    -moz-animation-timing-function: $timing;
+    -moz-animation-fill-mode: $fillmode;
+    -moz-animation-direction: $direction;
+ 
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-name: $animation;
+    animation-timing-function: $timing;
+    animation-fill-mode: $fillmode;
+    animation-direction: $direction;
+}
+
+@include keyframes(animation-collapse-menu) {
+    from {
+        height: 300px; //TODO: Fix arbitrary height
+    }
+
+    to {
+        height: 0px;
+    }
+}
+
+@include keyframes(animation-expand-menu) {
+    from {
+        height: 0px;
+    }
+
+    to {
+        height: 300px;
+    }
+}
+
+@include keyframes(animation-appear){
+    from {
+        opacity: 0;
+        transform: translate(30px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@include keyframes(animation-disappear){
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: translate(30px);
+    }
+}
+
+.navigation-list {
+    overflow: hidden;
+    height: 0px;
+}
+
+.nav-option {
+    overflow: visible;
+    opacity: 0;
+}
+
+.animation-collapse-menu{
+  @include animation(0, 0.4s, animation-collapse-menu);
+}
+
+.animation-expand-menu{
+  @include animation(0, 0.4s, animation-expand-menu);
+}
+
+.animation-appear{
+  @include animation(0, 0.4s, animation-appear);
+}
+
+.animation-disappear{
+  @include animation(0, 0.2s, animation-disappear);
+}
