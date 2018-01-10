@@ -1,6 +1,6 @@
 <aside>
 	<div class="container">
-		<nav class="flex separated">
+		<nav class="flex space-between">
 			<h1><a href="{{ site.url }}">{{site.title}}</a></h1>
 			<div id="menu">
 				<button class="hamburger hamburger--spin" type="button">
@@ -9,16 +9,16 @@
 						<span class="hamburger-inner"></span>
 					</span>
 				</button>
-				<div class="navigation-list">
-					<ul>
-						{% for page in site.pages %} {% if page.title %}
-						<li><a class="nav-option" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-						{% endif %} {% endfor %}
-						<li><a class="nav-option" href="{{ "/blog" | prepend: site.baseurl}}">About Me</a></li>
-					</ul>
-				</div>
 			</div>
 		</nav>
+		<div class="navigation-list">
+			<ul>
+				{% for page in site.pages %} {% if page.title %}
+				<li><a class="nav-option" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+				{% endif %} {% endfor %}
+				<li><a class="nav-option" href="{{ "/blog" | prepend: site.baseurl}}">About Me</a></li>
+			</ul>
+		</div>
 	</div>
+	<script src="{{ "/assets/js/hamburger.js" | prepend: site.url }}"></script>
 </aside>
-<script src="{{ "/assets/js/hamburger.js" | prepend: site.url }}"></script>

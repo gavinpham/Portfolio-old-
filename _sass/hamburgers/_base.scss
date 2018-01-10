@@ -1,7 +1,11 @@
 // Hamburger
 // ==================================================
 .hamburger {
-  padding: $hamburger-padding-y $hamburger-padding-x;
+  padding-top: $hamburger-padding-y;
+  padding-bottom: $hamburger-padding-y;
+  padding-left: $hamburger-padding-x;
+  padding-right: 0px;
+
   cursor: pointer;
   display: flex;
   align-items: center;
