@@ -31,6 +31,7 @@ html, body, .viewport {
 }
 
 body {
+	padding-top: $header-height;
 	margin: 0;
 	color: $font-color;
 	font-family: $font-style;
@@ -40,7 +41,6 @@ body {
 }
 
 article {
-	padding-top: 70px;
 	display: flex;
 	flex: 1;
 	flex-direction: column;
@@ -120,28 +120,29 @@ aside {
 			line-height: .1;
 		}
 		nav {
+			height: $header-height;
 			margin: 0 auto;
-			ul {
-			margin: 0;
-			padding: 0;
-			list-style: none;
-			display: flex;
-			flex-direction: column;
-				li {
+		}
+		ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+			li {
+				display: flex;
+				flex-direction: row-reverse;
+				a {
+					padding: 20px;
+					text-decoration: none;
 					display: flex;
-					flex-direction: row-reverse;
-					a {
-						padding: 20px;
+					font-family: $font-style;
+					line-height: 20px;
+					box-shadow: 0;
+					&:hover,&:active {
+						background: $header;
 						text-decoration: none;
-						display: flex;
-						font-family: $font-style;
-						line-height: 20px;
-						box-shadow: 0;
-						&:hover,&:active {
-							background: $header;
-							text-decoration: none;
-							color: #fff;
-						}
+						color: #fff;
 					}
 				}
 			}
