@@ -180,13 +180,8 @@ footer {
 	justify-content: space-between;
 }
 
-.aligncenter {
+.align-center {
 	align-items: center;
-}
-
-.container {
-	margin-left: 100px;
-	margin-right: 100px;
 }
 
 #menu {
@@ -210,11 +205,26 @@ i {
 	}
 }
 
-/* Responsively Scale the Container */
+
+/* CSS to responsively scale elements*/
+.container {
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+
+
 @media (max-width: 960px){
 	.container {
 		margin-left: 25px;
 		margin-right: 25px;
+	}
+	.title {
+		font-weight: 600;
+		font-size: 1.5em;
+	}
+	.hamburger-label {
+		display: none;
 	}
 }
 
