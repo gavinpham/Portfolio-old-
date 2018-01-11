@@ -122,6 +122,9 @@ aside {
 		nav {
 			height: $header-height;
 			margin: 0 auto;
+			@media (max-width: $resize-width){
+				height: $header-height-low-width;
+			}
 		}
 		ul {
 		margin: 0;
@@ -214,7 +217,11 @@ i {
 
 
 
-@media (max-width: 960px){
+@media (max-width: $resize-width){
+	body {
+		padding-top: $header-height-low-width;
+	}
+
 	.container {
 		margin-left: 25px;
 		margin-right: 25px;
