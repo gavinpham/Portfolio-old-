@@ -77,6 +77,9 @@
 }
 
 .navigation-list {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
     overflow: hidden;
     height: 0px;
 }
@@ -87,11 +90,11 @@
 }
 
 .animation-collapse-menu{
-  @include animation(0, 0.4s, animation-collapse-menu);
+  @include animation(0, 0.7s, animation-collapse-menu);
 }
 
 .animation-expand-menu{
-  @include animation(0, 0.4s, animation-expand-menu);
+  @include animation(0, 0.7s, animation-expand-menu);
 }
 
 .animation-appear{
