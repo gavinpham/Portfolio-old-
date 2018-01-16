@@ -13,10 +13,10 @@
 		</nav>
 		<div class="navigation-list">
 			<ul>
+				<li><a class="nav-option" href="{{ "/blog" | prepend: site.baseurl}}">Blog</a></li>
 				{% for page in site.pages %} {% if page.title %}
 				<li><a class="nav-option" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
 				{% endif %} {% endfor %}
-				<li><a class="nav-option" href="{{ "/blog" | prepend: site.baseurl}}">About Me</a></li>
 			</ul>
 			<h1 class="nav-title"></h1>
 		</div>

@@ -1,0 +1,63 @@
+body {
+	padding-top: $header-height;
+	margin: 0;
+	color: $font-color;
+	font-family: $font-style;
+	font-size: 1.1em;
+	line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1,h2,h3 {
+	font-weight: 600;
+	color: $heading-font-color;
+	font-family: $heading-font;
+}
+
+h1 {
+	color: $main;
+	font-size: 2.5em;
+	line-height: 1.5;
+	a,a:visited {
+		text-decoration: none;
+		color: $main;
+	}
+}
+
+h2 {
+	font-size: 2em;
+}
+
+a,a:visited {
+	color: $link-color;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+a:hover {
+	color: $link-hover-color;
+	text-decoration: underline;
+}
+
+time {
+	color: #898989;
+}
+
+.reference-link, .reference-link:visited, .reference-link:hover {
+	text-decoration: none;
+	padding-left: 10px;
+}
+
+i {
+	color: $main;
+	transition-property: opacity;
+	transition-duration: $hover-transition-duration;
+	transition-timing-function: $hover-transition-timing-function;
+
+	&:hover {
+		opacity: $hover-opacity;
+	}
+	&:active {
+		opacity: 0.3; //TODO: Standardize this
+	}
+}
