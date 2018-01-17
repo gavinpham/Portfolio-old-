@@ -73,7 +73,7 @@
     }
     to {
         opacity:    0;
-        transform:  translate(30px);
+        transform:  translateY(-20px);
     }
 }
 
@@ -99,11 +99,11 @@
 }
 
 .animation-appear{
-  @include animation(0, 0.4s, animation-appear);
+  @include animation(0, 0.5s, animation-appear);
 }
 
 .animation-disappear{
-  @include animation(0, 0.2s, animation-disappear);
+  @include animation(0, 0.15s, animation-disappear);
 }
 
 #menu {
