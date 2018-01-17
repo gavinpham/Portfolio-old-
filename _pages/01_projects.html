@@ -1,0 +1,11 @@
+---
+layout: page
+title: Projects
+tag: menu_accessible
+---
+
+{% for page in site.pages %} 
+	{% if page.category == "project" %}
+		<h3><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></h3>
+	{% endif %}
+{% endfor %}

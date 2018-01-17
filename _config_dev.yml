@@ -25,7 +25,7 @@ github_username:  gavinpham
 # Build settings
 sass:
   sass_dir: _sass
-include: ['_pages']
+include: ['_pages', '_projects']
 markdown: kramdown
 kramdown: 
   input: GFM

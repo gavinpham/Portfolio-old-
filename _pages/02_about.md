@@ -1,7 +1,8 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
+tag: menu_accessible
 ---
 
 About content goes here.

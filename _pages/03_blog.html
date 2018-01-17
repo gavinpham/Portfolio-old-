@@ -1,8 +1,9 @@
 ---
-layout: default
+layout: page
+title: Blog
+tag: menu_accessible
 ---
 
-<h2>Blog</h2>
 {% for post in site.posts %}
 	<time>{{ post.date | date: "%b %-d, %Y" }}</time>
 	<h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
