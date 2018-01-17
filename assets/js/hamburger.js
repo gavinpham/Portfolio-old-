@@ -7,8 +7,8 @@ var animation_expand_menu = "animation-expand-menu";
 var animation_collapse_menu = "animation-collapse-menu";
 var animation_appear = "animation-appear";
 var animation_disappear = "animation-disappear";
-var delay = 100;	//Units: ms
-var delay_short = 40;
+var delay = 90;	//Units: ms
+var delay_short = 30;
 var total_delay = nav_options_length * delay;
 
 function hideNavigationItems(){
@@ -29,7 +29,7 @@ function showNavigationItems(){
 	for (var i = 0; i < nav_options_length; i++){
 		setTimeout((i) => {
 			nav_options[i].classList.replace(animation_disappear, animation_appear);
-		}, i * delay + 100, i);
+		}, i * delay + delay, i);
 	}
 }
 
@@ -43,7 +43,7 @@ function initialMenuShow(){
 		setTimeout((i)=>{
 			console.log(i);
 			nav_options[i].classList.add(animation_appear);
-		}, i * delay + 100, i);
+		}, i * delay + delay, i);
 	}
 	nav.classList.add(animation_expand_menu);
 }
