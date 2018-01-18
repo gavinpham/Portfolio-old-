@@ -1,11 +1,29 @@
 ---
 layout: page
 title: Projects
+permalink: /projects/
 tag: menu_accessible
 ---
 
 {% for page in site.pages %} 
 	{% if page.category == "project" %}
-		<h3><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></h3>
+		<div class="project-brief-container">
+			<div class="project-brief-image card">
+			</div>
+			<div class="project-brief-text-container">
+				<h3 class="project-brief-title">
+					<a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+				</h3>
+				<div class="flex">
+					{% for tag in page.tags %}
+						<div class="project-brief-badge">
+						</div>
+					{% endfor %}
+				</div>
+				<p class="project-brief-description">
+					{{ page.content }}
+				</p>
+			</div>
+		</div>
 	{% endif %}
 {% endfor %}

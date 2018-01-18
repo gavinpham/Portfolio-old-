@@ -1,0 +1,31 @@
+.project-brief-container {
+	padding-bottom: 50px;
+	display: flex;
+	flex: 1;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.project-brief-image {
+	width: 50%;
+}
+
+.project-brief-text-container {
+	padding-left: 20px;
+}
+
+.project-brief-title {
+	margin: 0;
+}
+
+.project-brief-badge {
+	border-radius: 50%;
+	width: 50px;
+	height: 50px; 
+	background: $light;
+	margin:10px 10px 10px 0px;
+}
+
+.project-brief-description {
+	margin: 0px;
+}
