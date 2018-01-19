@@ -4,5 +4,7 @@ layout: default
 
 <h2>{{ page.title }}</h2>
 
-	{{ content }}
+<p>{{ page.sections['intro'] | textilize }}</p>
+
+<p>{{ page.sections['long'] | textilize }}</p>
 

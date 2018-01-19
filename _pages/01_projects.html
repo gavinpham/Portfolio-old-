@@ -21,7 +21,7 @@ tag: menu_accessible
 					{% endfor %}
 				</div>
 				<p class="project-brief-description">
-					{{ page.content | remove: '<p>' | remove: '</p>' }}
+					{{ page.sections['intro'] | textilize }}
 				</p>
 			</div>
 		</div>
