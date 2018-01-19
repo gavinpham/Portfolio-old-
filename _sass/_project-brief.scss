@@ -1,6 +1,6 @@
 .project-brief-container {
-	padding-bottom: 50px;
 	display: flex;
+	flex-direction: row;
 	flex: 1;
 	width: 100%;
 	justify-content: space-between;
@@ -11,7 +11,7 @@
 }
 
 .project-brief-text-container {
-	padding-left: 20px;
+	padding: 0px 0px 0px 20px;
 }
 
 .project-brief-title {
@@ -19,13 +19,36 @@
 }
 
 .project-brief-badge {
+	background: $light;
 	border-radius: 50%;
 	width: 50px;
 	height: 50px; 
-	background: $light;
-	margin:10px 10px 10px 0px;
+	margin: 10px 10px 10px 0px;
 }
 
 .project-brief-description {
 	margin: 0px;
+}
+
+hr {
+    color:$light;
+	width:100%;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    border-style: solid;
+    border-width: 0.5px;
+}
+
+@media (max-width: $resize-width){
+	.project-brief-image {
+		width: 100%;
+	}
+
+	.project-brief-container {
+		flex-direction: column;
+	}
+
+	.project-brief-text-container {
+		padding: 10px 0px 0px 0px;
+	}
 }
