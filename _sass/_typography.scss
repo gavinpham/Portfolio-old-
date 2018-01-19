@@ -43,11 +43,6 @@ time {
 	color: #898989;
 }
 
-.reference-link, .reference-link:visited, .reference-link:hover {
-	text-decoration: none;
-	padding-left: 10px;
-}
-
 i {
 	color: $main;
 	transition-property: opacity;
@@ -62,8 +57,13 @@ i {
 	}
 }
 
-@media (max-width: $resize-width){
-	.title {
+.reference-link, .reference-link:visited, .reference-link:hover {
+	text-decoration: none;
+	padding-left: 10px;
+}
+
+.title {
+	@media (max-width: $resize-width){
 		font-weight: 	600;
 		font-size: 		1.5em;
 	}

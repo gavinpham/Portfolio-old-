@@ -1,0 +1,48 @@
+.project-header-container {
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+	width: 100%;
+	justify-content: space-between;
+	@media (max-width: $resize-width){
+		flex-direction: column;
+	}
+}
+
+.project-header-text-container {
+	padding: 0px 100px 0px 0px;
+	@media (max-width: $resize-width){
+		padding: 0px 0px 10px 0px;
+	}
+}
+
+.project-details {
+	font-size: 0.75em;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	a {
+		text-decoration: none;
+		color: $main;
+		transition-property: opacity;
+		transition-duration: $hover-transition-duration;
+		transition-timing-function: $hover-transition-timing-function;
+		&:hover {
+			opacity: $hover-opacity;
+		}
+		&:active {
+			opacity: 0.3; //TODO: Standardize this
+		}
+	}
+}
+
+.project-image-container {
+	width: 100%;
+}
+
+.project-image-main {
+	width: 100%;
+	height: auto;
+	border-radius: 5px;
+}
+
+
