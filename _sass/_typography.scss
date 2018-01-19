@@ -61,3 +61,10 @@ i {
 		opacity: 0.3; //TODO: Standardize this
 	}
 }
+
+@media (max-width: $resize-width){
+	.title {
+		font-weight: 	600;
+		font-size: 		1.5em;
+	}
+}

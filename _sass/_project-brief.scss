@@ -4,14 +4,23 @@
 	flex: 1;
 	width: 100%;
 	justify-content: space-between;
+	@media (max-width: $resize-width){
+		flex-direction: column;
+	}
 }
 
 .project-brief-image {
 	width: 50%;
+	@media (max-width: $resize-width){
+		width: 100%;
+	}
 }
 
 .project-brief-text-container {
 	padding: 0px 0px 0px 20px;
+	@media (max-width: $resize-width){
+		padding: 10px 0px 0px 0px;
+	}
 }
 
 .project-brief-title {
@@ -37,18 +46,4 @@ hr {
     margin-top: 40px;
     border-style: solid;
     border-width: 0.5px;
-}
-
-@media (max-width: $resize-width){
-	.project-brief-image {
-		width: 100%;
-	}
-
-	.project-brief-container {
-		flex-direction: column;
-	}
-
-	.project-brief-text-container {
-		padding: 10px 0px 0px 0px;
-	}
 }

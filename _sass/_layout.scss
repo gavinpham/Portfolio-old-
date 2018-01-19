@@ -11,6 +11,9 @@ body {
 	flex: 1 0 auto;
 	flex-direction: column;
 	margin:0px;
+	@media (max-width: $resize-width){
+		padding-top: $header-height-low-width;
+	}
 }
 
 main {
@@ -49,24 +52,8 @@ footer {
 .container {
 	margin-left: 100px;
 	margin-right: 100px;
-}
-
-@media (max-width: $resize-width){
-	body {
-		padding-top: $header-height-low-width;
-	}
-
-	.container {
+	@media (max-width: $resize-width){
 		margin-left: 	25px;
 		margin-right: 	25px;
 	}
-	.title {
-		font-weight: 	600;
-		font-size: 		1.5em;
-	}
-	.hamburger-label {
-		display: none;
-	}
 }
-
-
