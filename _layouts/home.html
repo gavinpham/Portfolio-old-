@@ -2,22 +2,26 @@
 layout: default
 ---
 
-<h4>
-	Human-Centered Designer.
-	<br />
-	Computer Scientist.
-	<br />
-	Generally a Cool Guy.
-</h4>
+<div class="home-container">
+	<h4>
+		Human-Centered Designer.
+		<br />
+		Computer Scientist.
+		<br />
+		Generally a Cool Guy.
+	</h4>
 
-<ul class="card-container">
-	<li class="card">
-		<p>Test 1</p>
-	</li>
-	<li class="card">
-		<p>Test 2</p>
-	</li>
-	<li class="card">
-		<p>Test 3</p>
-	</li>
-</ul>
+	<ul class="featured-project-container">
+		{% for page in site.pages %}
+			{% if page.category contains "project" and page.category contains "featured" %}
+			<a href="{{ page.url | prepend: site.baseurl }}">
+				<li class="featured-project">
+					{% if page.img %}
+					  <img class="project-image-main" src="{{ site.baseurl }}/assets/img/{{ page.img }}">
+					{% endif %}
+				</li>
+			</a>
+			{% endif %}
+		{% endfor %}
+	</ul>
+</div>

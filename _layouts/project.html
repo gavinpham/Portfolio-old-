@@ -2,7 +2,29 @@
 layout: default
 ---
 
-<h2>{{ page.title }}</h2>
+<h2 class="title">{{ page.title }}</h2>
 
-	{{ content }}
+<div class="project-header-container">
+			<div class="project-header-text-container">
+				<p class="project-brief-description">
+					{{ page.sections['intro'] | textilize }}
+				</p>
+				<p class="project-details">
+					{{ content | remove: '<p>' | remove: '</p>' }}
+				</p>
+				<div class="flex">
+					{% for tag in page.tags %}
+						<div class="project-brief-badge">
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="project-brief-image-container">
+				{% if page.img %}
+				  <img class="project-image-main" src="{{ site.baseurl }}/assets/img/{{ page.img }}">
+				{% endif %}
+			</div>
+		</div>
+
+<p>{{ page.sections['long'] | textilize }}</p>
 

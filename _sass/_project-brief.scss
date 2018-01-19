@@ -9,15 +9,17 @@
 	}
 }
 
-.project-brief-image {
-	width: 50%;
+.project-brief-image-container {
+	flex: 1 0 auto;
+	width: 40%;
+	overflow: hidden;
 	@media (max-width: $resize-width){
 		width: 100%;
 	}
 }
 
 .project-brief-text-container {
-	padding: 0px 0px 0px 20px;
+	padding: 0px 0px 0px 50px;
 	@media (max-width: $resize-width){
 		padding: 10px 0px 0px 0px;
 	}

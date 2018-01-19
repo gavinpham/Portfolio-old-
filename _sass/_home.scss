@@ -1,0 +1,38 @@
+.home-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	//TODO: Find a better resizing dimension for tablets
+}
+
+.featured-project-container {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	flex: 1 1 auto;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	a + a {
+		margin: 0px 0px 0px 40px;
+	}
+
+	@media (max-width: $resize-width){
+		flex-direction: column;
+
+		a + a {
+			margin: 20px 0px 0px 0px;
+		}
+	}
+}
+
+.featured-project {
+	flex: 1 1 auto;
+	border-radius: 5px;
+	min-height: 200px;
+}
+
+

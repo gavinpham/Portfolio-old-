@@ -6,9 +6,12 @@ tag: menu_accessible
 ---
 
 {% for page in site.pages %} 
-	{% if page.category == "project" %}
+	{% if page.category contains "project" %}
 		<div class="project-brief-container">
-			<div class="project-brief-image card">
+			<div class="project-brief-image-container">
+				{% if page.img %}
+				  <img class="project-image-main" src="{{ site.baseurl }}/assets/img/{{ page.img }}">
+				{% endif %}
 			</div>
 			<div class="project-brief-text-container">
 				<h3 class="project-brief-title">
@@ -21,7 +24,7 @@ tag: menu_accessible
 					{% endfor %}
 				</div>
 				<p class="project-brief-description">
-					{{ page.content | remove: '<p>' | remove: '</p>' }}
+					{{ page.sections['intro'] | textilize }}
 				</p>
 			</div>
 		</div>
