@@ -14,18 +14,21 @@ tag: menu_accessible
 				{% endif %}
 			</div>
 			<div class="project-brief-text-container">
-				<h3 class="project-brief-title">
-					<a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-				</h3>
+				<div>
+					<h2 class="project-brief-title">
+						<a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+					</h2>
+					<p class="project-brief-description">
+						{{ page.sections['intro'] | textilize }}
+					</p>
+				</div>
 				<div class="flex">
 					{% for tag in page.tags %}
 						<div class="project-brief-badge">
+							TEST
 						</div>
 					{% endfor %}
 				</div>
-				<p class="project-brief-description">
-					{{ page.sections['intro'] | textilize }}
-				</p>
 			</div>
 		</div>
 		<hr>

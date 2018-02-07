@@ -14,13 +14,13 @@ layout: default
 	<ul class="featured-project-container">
 		{% for page in site.pages %}
 			{% if page.category contains "project" and page.category contains "featured" %}
-			<a href="{{ page.url | prepend: site.baseurl }}">
-				<li class="featured-project">
+			<li class="featured-project">
+				<a href="{{ page.url | prepend: site.baseurl }}">
 					{% if page.img %}
 					  <img class="project-image-main" src="{{ site.baseurl }}/assets/img/{{ page.img }}">
 					{% endif %}
-				</li>
-			</a>
+				</a>
+			</li>
 			{% endif %}
 		{% endfor %}
 	</ul>

@@ -1,15 +1,18 @@
 ---
 layout: project
-title:  "What's up with millenial dog ownership?"
+title: "Millenial Dog Ownership"
 permalink: /projects/dogs/
 category: ['project','featured']
 tags: ['hcd']
 img: dogs.jpg
 sections:
   intro: |
-    DOGS dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. SHORT
+    The new generation of working men and women are in love with dogs. Dogs have never been closer to humans, and millennials are quick to spoil their "#furbaby". What technology and household innovations exist in this space? Looking even further down the road, how does dog ownership change when owners become real parents?
   long: |
-    DOGS dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. LONG
+    I went into research armed with questions and interviewing techniques, eager to learn about the secret life of these pets. After a few months of recurring research and synthesis, I was able to formulate a handful of “How Might We” statements and a brief presentation to convey their meaning. These statements were created as a means to aide in further ideation for Rover.
+
+    Check out the presentation below.
+
 ---
 
 Theoretical Client: [Rover](https://www.rover.com/)  
