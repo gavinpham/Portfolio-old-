@@ -16,14 +16,14 @@
 	flex-direction: row;
 	justify-content: space-between;
 
-	a + a {
+	li + li {
 		margin: 0px 0px 0px 40px;
 	}
 
 	@media (max-width: $resize-width){
 		flex-direction: column;
 
-		a + a {
+		li + li {
 			margin: 20px 0px 0px 0px;
 		}
 	}
@@ -32,7 +32,6 @@
 .featured-project {
 	flex: 1 1 auto;
 	border-radius: 5px;
-	min-height: 200px;
 }
 
 

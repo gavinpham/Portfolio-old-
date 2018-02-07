@@ -11,7 +11,7 @@
 
 .project-brief-image-container {
 	flex: 1 0 auto;
-	width: 40%;
+	width: 33%;
 	overflow: hidden;
 	@media (max-width: $resize-width){
 		width: 100%;
@@ -19,6 +19,9 @@
 }
 
 .project-brief-text-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	padding: 0px 0px 0px 50px;
 	@media (max-width: $resize-width){
 		padding: 10px 0px 0px 0px;
@@ -26,19 +29,24 @@
 }
 
 .project-brief-title {
-	margin: 0;
+	margin: 0px 0px 20px 0px;
 }
 
 .project-brief-badge {
-	background: $light;
+	border: 8px;
+	border-style: solid;
+	border-color: black;
 	border-radius: 50%;
-	width: 50px;
-	height: 50px; 
+	width: 75px;
+	height: 75px;
 	margin: 10px 10px 10px 0px;
+	text-align: center;
+	font-size:20px;
+	line-height: 60px;
 }
 
 .project-brief-description {
-	margin: 0px;
+	margin: 0px 0px 20px 0px;
 }
 
 hr {

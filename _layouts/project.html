@@ -15,6 +15,7 @@ layout: default
 				<div class="flex">
 					{% for tag in page.tags %}
 						<div class="project-brief-badge">
+							TEST
 						</div>
 					{% endfor %}
 				</div>
@@ -26,5 +27,5 @@ layout: default
 			</div>
 		</div>
 
-<p>{{ page.sections['long'] | textilize }}</p>
+<div>{{ page.sections['long'] | textilize | newline_to_br }}</div>
 
