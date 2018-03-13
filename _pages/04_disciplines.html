@@ -1,0 +1,32 @@
+---
+layout: page
+title: Disciplines
+permalink: /disciplines/
+tag: menu_accessible
+---
+
+{% for page in site.pages %}
+	{% if page.category contains "discipline" %}
+		<h3>
+			<a href="{{ page.url | prepend: site.baseurl }}">
+				{{ page.title }}
+			</a>
+		</h3>
+		{{ page.description }}
+		{% if page.tag == "dev" %}
+			<div class="project-brief-badge badge-dev">
+				{{ page.tag }}
+			</div>
+		{% endif %}
+		{% if page.tag == "hcd" %}
+			<div class="project-brief-badge badge-hcd">
+				{{ page.tag }}
+			</div>
+		{% endif %}
+		{% if page.tag == "pro" %}
+			<div class="project-brief-badge badge-pro">
+				{{ page.tag }}
+			</div>
+		{% endif %}
+	{% endif %}
+{% endfor %}
