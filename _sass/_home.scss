@@ -31,7 +31,29 @@
 
 .featured-project {
 	flex: 1 1 auto;
+	position: relative;
 	border-radius: 5px;
+	overflow: hidden;
+	a {
+		&:after {
+		    content: '\A';
+		    position: absolute;
+		    width:100%;height:100%;
+		    top:0;left:0;
+		    border-radius: 5px;
+		    background: rgba(0,0,0,0.6);
+		    opacity: 0;
+		    transition: all 0.5s;
+		    -webkit-transition: all 0.5s;
+		}
+		&:hover:after {
+		    opacity:1;
+		}
+	}
 }
 
+.project-image-main-info{
+	position: absolute;
+	opacity: 0;
 
+}

@@ -16,8 +16,9 @@ layout: default
 			{% if page.category contains "project" and page.category contains "featured" %}
 			<li class="featured-project">
 				<a href="{{ page.url | prepend: site.baseurl }}">
+					<div class="project-image-main-info">{{ page.title }}</div>
 					{% if page.img %}
-					  <img class="project-image-main" src="{{ site.baseurl }}/assets/img/{{ page.img }}">
+						<img class="project-image-main" src="{{ site.baseurl }}/assets/img/{{ page.img }}">
 					{% endif %}
 				</a>
 			</li>
