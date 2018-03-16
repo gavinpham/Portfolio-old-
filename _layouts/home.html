@@ -3,13 +3,26 @@ layout: default
 ---
 
 <div class="home-container">
-	<h4>
-		Human-Centered Designer.
-		<br />
-		Computer Scientist.
-		<br />
-		Generally A Pretty Swell Guy.
-	</h4>
+	<div class="flex space-between align-center">
+		<h4>
+			Human-Centered Designer.
+			<br />
+			Computer Scientist.
+			<br />
+			Generally A Pretty Swell Guy.
+		</h4>
+		<div class="conditional-render">
+			{% for page in site.pages %}
+				{% if page.category contains "discipline" %}
+					<a class="badge-link" href="{{ site.baseurl }}/disciplines/{{ page.tag }}">
+							<div class="project-brief-badge badge-{{page.tag}}">
+								{{ page.tag }}
+							</div>
+					</a>
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
 
 	<ul class="featured-project-container">
 		{% for page in site.pages %}

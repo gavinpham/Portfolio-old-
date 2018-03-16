@@ -1,0 +1,42 @@
+.project-brief-badge {
+	border: 8px;
+	border-style: solid;
+	border-radius: 50%;
+	width: 75px;
+	height: 75px;
+	margin: 10px 10px 10px 0px;
+	text-align: center;
+	font-size:20px;
+	line-height: 60px;
+	text-transform: uppercase;
+	font-weight: 600;
+	transition-property: opacity;
+	transition-duration: $hover-transition-duration;
+	transition-timing-function: $hover-transition-timing-function;
+
+	&:hover {
+		opacity: $hover-opacity;
+	}
+	&:active {
+		opacity: 0.3; //TODO: Standardize this
+	}
+}
+
+.badge-link, .badge-link:visited, .badge-link:hover {
+	text-decoration: none;
+}
+
+.badge-dev {
+	border-color: $blue;
+	color: $blue;
+}
+
+.badge-hcd {
+	border-color: $orange;
+	color: $orange;
+}
+
+.badge-pro {
+	border-color: $pink;
+	color: $pink;
+}

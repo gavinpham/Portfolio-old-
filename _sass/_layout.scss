@@ -57,3 +57,10 @@ footer {
 		margin-right: 	25px;
 	}
 }
+
+.conditional-render {
+	display: flex;
+	@media (max-width: $resize-width){
+		display: none;
+	}
+}
