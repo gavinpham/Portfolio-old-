@@ -1,27 +1,28 @@
-var hamburger = document.querySelector(".hamburger");
-var nav = document.querySelector(".navigation-list");
-var nav_options = document.querySelectorAll(".nav-option");
+/* CONSTANTS */
+var MENU_OPEN_DELAY = 90;	//Units: ms
+var MENU_CLOSE_DELAY = 30;
+
+var nav = $(".navigation-list");
+var nav_options = $(".nav-option");
 var nav_options_length = nav_options.length;
 
 var animation_expand_menu = "animation-expand-menu";
 var animation_collapse_menu = "animation-collapse-menu";
 var animation_appear = "animation-appear";
 var animation_disappear = "animation-disappear";
-var delay = 90;	//Units: ms
-var delay_short = 30;
-var total_delay = nav_options_length * delay;
 
 function hideNavigationItems(){
 	//	Animate list elements to disappear, starting from the last element
 	for (var i = nav_options_length - 1; i >= 0; i--){
+
 		setTimeout((i) => {
 			nav_options[i].classList.replace(animation_appear, animation_disappear);
-		}, (nav_options_length - 1 - i) * delay_short, i);
+		}, (nav_options_length - 1 - i) * MENU_CLOSE_DELAY, i);
 	}
 }
 
 function collapseNavigation(){
-	nav.classList.replace(animation_expand_menu, animation_collapse_menu);
+	nav.removeClass(animation_expand_menu).addClass(animation_collapse_menu);
 }
 
 function showNavigationItems(){
@@ -29,12 +30,12 @@ function showNavigationItems(){
 	for (var i = 0; i < nav_options_length; i++){
 		setTimeout((i) => {
 			nav_options[i].classList.replace(animation_disappear, animation_appear);
-		}, i * delay + delay, i);
+		}, i * MENU_OPEN_DELAY + MENU_OPEN_DELAY, i);
 	}
 }
 
 function expandNavigation(){
-	nav.classList.replace(animation_collapse_menu, animation_expand_menu);
+	nav.removeClass(animation_collapse_menu).addClass(animation_expand_menu);
 }
 
 function initialMenuShow(){
@@ -43,16 +44,16 @@ function initialMenuShow(){
 		setTimeout((i)=>{
 			console.log(i);
 			nav_options[i].classList.add(animation_appear);
-		}, i * delay + delay, i);
+		}, i * MENU_OPEN_DELAY + MENU_OPEN_DELAY, i);
 	}
-	nav.classList.add(animation_expand_menu);
+	nav.addClass(animation_expand_menu);
 }
 
 function toggleNavigationVisible(){
-	if (nav.classList.contains(animation_expand_menu)){
+	if (nav.hasClass(animation_expand_menu)){
 		hideNavigationItems();
 		collapseNavigation();
-	} else if (nav.classList.contains(animation_collapse_menu)) {
+	} else if (nav.hasClass(animation_collapse_menu)){
 		showNavigationItems();
 		expandNavigation();
 	} else {
@@ -62,7 +63,7 @@ function toggleNavigationVisible(){
 	}
 }
 
-hamburger.addEventListener("click", function() {
-	hamburger.classList.toggle("is-active");
+$(".hamburger").on('click', function(){
+	$(this).toggleClass("is-active");
 	toggleNavigationVisible();
 });

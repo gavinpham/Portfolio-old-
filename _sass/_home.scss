@@ -1,3 +1,30 @@
+/* Animations */
+@include keyframes(animation-appear-from-bottom){
+	0% {
+		transform: translateY(20px);
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.animation-appear-from-bottom{
+  @include animation(0, 0.60s, animation-appear-from-bottom);
+}
+
+@include keyframes(animation-badge-entrance){
+	0% {transform: translateY(15px);}
+	50%, 100% {transform: translateY(0);}
+    30% {transform: translateY(-20px);}
+    80% {transform: translateY(-5px);}
+}
+
+.animation-badge-entrance{
+  @include animation(0, 0.75s, animation-badge-entrance);
+}
+
+/* Stylings */
 .home-container {
 	display: flex;
 	flex-direction: column;
@@ -34,6 +61,7 @@
 	position: relative;
 	border-radius: 5px;
 	overflow: hidden;
+	box-shadow: 0 3px 6px 0 rgba(4, 25, 54, .2), 0 3px 6px 0 rgba(4, 25, 54, .19);
 	a {
 		border-radius: 5px;
 		&:after, &:before {
@@ -68,5 +96,10 @@
 .project-image-main-info{
 	position: absolute;
 	opacity: 0;
+}
 
+.sub-header-container {
+	margin: 25px 0 25px 0;
+	display: flex;
+	flex-direction: column;
 }

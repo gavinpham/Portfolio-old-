@@ -7,6 +7,8 @@ $black: #000;
 $white: #fff;
 $main: $black;
 $header: $black;
+$gray-1: #545454;
+$gray-2: #989898;
 $light: 		#E7EDF4;
 $blue:			#1dace6;
 $orange:		#fbae3c;
@@ -19,11 +21,13 @@ $hover-transition-duration: 0.15s;
 $hover-transition-timing-function: linear;
 
 // FONT COLORS
+$sub-header: $gray-1;
 $font-color: $black;
 $link-color: $black;
 $link-hover-color: $black;
 
 //	HEADER
+$site-title-font: 'ltc-bodoni-175';
 $heading-font: 'ministry';
 $heading-font-color: $black;
 $font-style: 'ministry', sans-serif;

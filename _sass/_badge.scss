@@ -10,16 +10,11 @@
 	line-height: 60px;
 	text-transform: uppercase;
 	font-weight: 600;
-	transition-property: opacity;
+	transition-property: all;
 	transition-duration: $hover-transition-duration;
 	transition-timing-function: $hover-transition-timing-function;
-
-	&:hover {
-		opacity: $hover-opacity;
-	}
-	&:active {
-		opacity: 0.3; //TODO: Standardize this
-	}
+	border-color: $gray-1;
+	color: $gray-1;
 }
 
 .badge-link, .badge-link:visited, .badge-link:hover {
@@ -27,16 +22,22 @@
 }
 
 .badge-dev {
-	border-color: $blue;
 	color: $blue;
+	&:hover {
+		border-color: $blue;
+	}
 }
 
 .badge-hcd {
-	border-color: $orange;
 	color: $orange;
+	&:hover{
+		border-color: $orange;
+	}
 }
 
 .badge-pro {
-	border-color: $pink;
 	color: $pink;
+	&:hover{
+		border-color: $pink;
+	}
 }
