@@ -57,14 +57,32 @@ i {
 	}
 }
 
+.site-title {
+	font-weight: 400;
+	color: $heading-font-color;
+	font-family: $site-title-font;
+	@media (max-width: $resize-width){
+		font-size: 		1.5em;
+	}
+}
+
+.sub-header {
+	color: $sub-header;
+	font-weight: 400;
+	display: inline-block;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.marginless {
+	margin: 0;
+}
+
+.light-weight {
+	font-weight: 400;
+}
+
 .reference-link, .reference-link:visited, .reference-link:hover {
 	text-decoration: none;
 	padding-left: 10px;
-}
-
-.title {
-	@media (max-width: $resize-width){
-		font-weight: 	600;
-		font-size: 		1.5em;
-	}
 }

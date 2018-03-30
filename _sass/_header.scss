@@ -1,42 +1,4 @@
 /* Animations */
-@mixin keyframes($animationName) {
-  @-webkit-keyframes #{$animationName} {
-    @content;
-  }
-  @-moz-keyframes #{$animationName} {
-    @content;
-  }
-  @-o-keyframes #{$animationName} {
-    @content;
-  }
-  @keyframes #{$animationName} {
-    @content;
-  }
-}
-
-@mixin animation ($delay, $duration, $animation, $timing: ease, $direction: forward, $fillmode: forwards) {
-    -webkit-animation-delay:            $delay;
-    -webkit-animation-duration:         $duration;
-    -webkit-animation-name:             $animation;
-    -webkit-animation-timing-function:  $timing;
-    -webkit-animation-fill-mode:        $fillmode;
-    -webkit-animation-direction:        $direction;
- 
-    -moz-animation-delay:               $delay;
-    -moz-animation-duration:            $duration;
-    -moz-animation-name:                $animation;
-    -moz-animation-timing-function:     $timing;
-    -moz-animation-fill-mode:           $fillmode;
-    -moz-animation-direction:           $direction;
- 
-    animation-delay:                    $delay;
-    animation-duration:                 $duration;
-    animation-name:                     $animation;
-    animation-timing-function:          $timing;
-    animation-fill-mode:                $fillmode;
-    animation-direction:                $direction;
-}
-
 @include keyframes(animation-collapse-menu) {
     from {
         height: 300px; //TODO: Fix arbitrary height
@@ -77,19 +39,6 @@
     }
 }
 
-.navigation-list {
-    display:            flex;
-    flex-direction:     row-reverse;
-    justify-content:    space-between;
-    overflow:           hidden;
-    height:             0px;
-}
-
-.nav-option {
-    overflow: visible;
-    opacity: 0;
-}
-
 .animation-collapse-menu{
   @include animation(0, 0.3s, animation-collapse-menu);
 }
@@ -104,6 +53,19 @@
 
 .animation-disappear{
   @include animation(0, 0.1s, animation-disappear);
+}
+
+.navigation-list {
+    display:            flex;
+    flex-direction:     row-reverse;
+    justify-content:    space-between;
+    overflow:           hidden;
+    height:             0px;
+}
+
+.nav-option {
+    overflow: visible;
+    opacity: 0;
 }
 
 #menu {
@@ -130,7 +92,7 @@ aside {
     width: 100%;
     z-index: 2;
     border-bottom: 1px solid lighten($light, 30%);
-    box-shadow: 0px 1px 1px RGBA(4, 25, 54, .1);
+    box-shadow: 0px 3px 6px rgba(4, 25, 54, .1);
     div {
         h1 {
             line-height: .1;
@@ -165,7 +127,7 @@ aside {
                     &:hover,&:active {
                         background: $header;
                         text-decoration: none;
-                        color: #fff;
+                        color: $white;
                     }
                 }
             }

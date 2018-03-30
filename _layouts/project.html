@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<h2 class="title">{{ page.title }}</h2>
+<h2>{{ page.title }}</h2>
 
 <div class="project-header-container">
 			<div class="project-header-text-container">
@@ -14,9 +14,11 @@ layout: default
 				</p>
 				<div class="flex">
 					{% for tag in page.tags %}
-						<div class="project-brief-badge">
-							TEST
-						</div>
+						<a class="badge-link" href="{{ site.baseurl }}/disciplines/{{ tag }}">
+							<div class="project-brief-badge badge-{{tag}}">
+								{{ tag }}
+							</div>
+						</a>
 					{% endfor %}
 				</div>
 			</div>

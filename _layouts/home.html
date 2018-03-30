@@ -3,21 +3,31 @@ layout: default
 ---
 
 <div class="home-container">
-	<h4>
-		Human-Centered Designer.
-		<br />
-		Computer Scientist.
-		<br />
-		Generally A Pretty Swell Guy.
-	</h4>
-
+	<div class="flex space-between align-center full-width">
+		<div class="sub-header-container">
+			<h4 class="sub-header hidden">Human-Centered Designer</h4>
+			<h4 class="sub-header hidden">Computer Scientist</h4>
+			<h4 class="sub-header hidden last">Generally A Pretty Swell Guy</h4>
+		</div>
+		<div class="conditional-render">
+			{% for page in site.pages %}
+				{% if page.category contains "discipline" %}
+					<a class="badge-link" href="{{ site.baseurl }}/disciplines/{{ page.tag }}">
+							<div class="project-brief-badge badge-{{page.tag}} hidden">
+								{{ page.tag }}
+							</div>
+					</a>
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
 	<ul class="featured-project-container">
 		{% for page in site.pages %}
 			{% if page.category contains "project" and page.category contains "featured" %}
-			<li class="featured-project">
-				<a href="{{ page.url | prepend: site.baseurl }}">
+			<li class="featured-project hidden">
+				<a data-content="{{ page.title }}" href="{{ page.url | prepend: site.baseurl }}">
 					{% if page.img %}
-					  <img class="project-image-main" src="{{ site.baseurl }}/assets/img/{{ page.img }}">
+						<img class="project-image-main" src="{{ site.baseurl }}/assets/img/{{ page.img }}">
 					{% endif %}
 				</a>
 			</li>
@@ -25,3 +35,4 @@ layout: default
 		{% endfor %}
 	</ul>
 </div>
+<script src="{{ "/assets/js/home.js" | prepend: site.url }}"></script>

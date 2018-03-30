@@ -1,0 +1,24 @@
+---
+layout: page
+title: Disciplines
+permalink: /disciplines/
+tag: menu_accessible
+---
+
+{% for page in site.pages %}
+	{% if page.category contains "discipline" %}
+		<div class="flex">
+			<a class="badge-link" href="{{ site.baseurl }}/disciplines/{{ page.tag }}">
+				<div class="project-brief-badge badge-{{ page.tag }}">
+					{{ page.tag }}
+				</div>
+			</a>
+		</div>
+		<h3>
+			<a href="{{ page.url | prepend: site.baseurl }}">
+				{{ page.title }}
+			</a>
+		</h3>
+		{{ page.description }}
+	{% endif %}
+{% endfor %}

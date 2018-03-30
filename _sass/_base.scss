@@ -1,19 +1,38 @@
-$content-width: 800px;
-$main: #000000;
-$font-style: 'ministry', sans-serif;
-$font-color: #000000;
-$link-color: #000000;
-$link-hover-color: $main;
-$hover-opacity: 0.7;
+//	SCREEN SIZING
+$content-width: 	800px;
+$resize-width: 		960px;
+
+//	COLORS
+$black: #000;
+$white: #fff;
+$main: $black;
+$header: $black;
+$gray-1: #545454;
+$gray-2: #989898;
+$light: 		#E7EDF4;
+$blue:			#1dace6;
+$orange:		#fbae3c;
+$yellow:		#e7f150;
+$pink:			#fd4db0;
+
+//	HOVER
+$hover-opacity: 0.5;
 $hover-transition-duration: 0.15s;
 $hover-transition-timing-function: linear;
+
+// FONT COLORS
+$sub-header: $gray-1;
+$font-color: $black;
+$link-color: $black;
+$link-hover-color: $black;
+
+//	HEADER
+$site-title-font: 'ltc-bodoni-175';
 $heading-font: 'ministry';
-$heading-font-color: #000000;
-$light: #E7EDF4;
-$header:  #000000;
+$heading-font-color: $black;
+$font-style: 'ministry', sans-serif;
 $header-height: 90px;
 $header-height-low-width: 50px;
-$resize-width: 960px;
 
 *,
 *::before,

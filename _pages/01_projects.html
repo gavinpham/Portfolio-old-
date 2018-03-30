@@ -24,9 +24,11 @@ tag: menu_accessible
 				</div>
 				<div class="flex">
 					{% for tag in page.tags %}
-						<div class="project-brief-badge">
-							TEST
-						</div>
+						<a class="badge-link" href="{{ site.baseurl }}/disciplines/{{ tag }}">
+							<div class="project-brief-badge badge-{{tag}}">
+								{{ tag }}
+							</div>
+						</a>
 					{% endfor %}
 				</div>
 			</div>
