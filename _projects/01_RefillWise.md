@@ -4,6 +4,7 @@ title:  "It's Okay To Talk About Cost"
 permalink: /projects/refillwise/
 category: ['project','featured']
 tags: ['hcd','dev', 'pro']
+hover_catch: "hcd dev pro"
 img: refillwise.jpg
 sections:
   intro: |

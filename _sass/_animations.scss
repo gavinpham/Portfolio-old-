@@ -45,6 +45,14 @@
     typing 0.7s steps(25, end),
 }
 
+/* Typewriter Animation */
+.typewriter-slow {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  animation:
+    typing 2s steps(17, end),
+}
+
 /* The typing effect */
 @keyframes typing {
   from {
