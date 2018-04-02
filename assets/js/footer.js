@@ -1,7 +1,5 @@
-var GLYPH_DELAY = 600;
-
 function show_footer_glyphs(){
-	$(".footer-glyph").each(function(i){
+	$(".footer-link").each(function(i){
 		var $this = $(this);
 		setTimeout(() => {
 			$this.removeClass("hidden");

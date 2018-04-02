@@ -66,6 +66,13 @@ i {
 	}
 }
 
+.page-title, .project-title {
+	font-size: 2em;
+	@media (max-width: $resize-width){
+		font-size: 		1.5em;
+	}
+}
+
 .content-label {
 	color: $gray-3;
 	font-size: 2em;
@@ -117,21 +124,40 @@ i {
 	margin: 0;
 }
 
+.naked-link,.naked-link:visited,.naked-link:hover{
+	text-decoration: none;
+}
+
 .light-weight {
 	font-weight: 400;
 }
 
 .reference-link, .reference-link:visited, .reference-link:hover {
 	text-decoration: none;
-	padding-left: 10px;
-}
-
-.footer-glyph {
+	padding: 0 0 0 10px;
+	font-size: 2em;
 	color: $gray-3;
-	font-size: 36px;
 	transition: all $hover-transition-duration-long;
 	-webkit-transition: all $hover-transition-duration-long;
 	&:hover {
 		color: $gray-1;
 	}
+}
+
+.glyph {
+	font-size: 30px;
+}
+
+.footer-link, #footer-contact{
+	color: $gray-3;
+	transition: all $hover-transition-duration-long;
+	-webkit-transition: all $hover-transition-duration-long;
+	&:hover {
+		color: $gray-1;
+	}
+}
+
+#footer-contact {
+	font-weight: 400;
+	font-size: 1.2em;
 }

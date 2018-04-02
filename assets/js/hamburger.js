@@ -1,7 +1,3 @@
-/* CONSTANTS */
-var MENU_OPEN_DELAY = 90;	//Units: ms
-var MENU_CLOSE_DELAY = 30;
-
 var nav = $(".navigation-list");
 var nav_options = $(".nav-option");
 var nav_options_length = nav_options.length;

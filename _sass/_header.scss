@@ -111,6 +111,7 @@ aside {
         display: flex;
         width: 130px; //TODO: Formalize arbitrary width
         flex-direction: column;
+        justify-content: right;
         align-items: flex-start;
             li {
                 width: 130px;
@@ -124,6 +125,7 @@ aside {
                     font-family: $font-style;
                     line-height: 20px;
                     box-shadow: 0;
+                    border-radius: 10px;
                     &:hover,&:active {
                         background: $header;
                         text-decoration: none;

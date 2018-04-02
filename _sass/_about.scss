@@ -4,3 +4,13 @@
 		padding: 20px 0 20px 0;
 	}
 }
+
+.about-body-container {
+	@media (min-width: $resize-width){
+		width: 60%;
+	}
+}
+
+.about-cascade-entry {
+	margin: 0;
+}

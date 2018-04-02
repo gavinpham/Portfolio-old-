@@ -8,7 +8,9 @@ hover_catch: "dev"
 img: myallergypal.jpg
 sections:
   intro: |
-    Allergen immunotherapy treatment used to required frequent documentation of symptoms, resulting in a small mountain of paper. Can we add more value to the process by digitizing it?
+    Allergen immunotherapy treatment used to required frequent documentation of symptoms, resulting in a small mountain of paper.
+
+    Can we add more value to the process by digitizing it?
   long: |
     MyAllergyPal changes the way patients can track their progress by simplifying and digitizing progress towards an allergy-free life. The application was a result of collaboration between myself and other interns at The BHW Group. Patients at allergy clinics are able to take injections at home as they complete allergen immunotherapy, allowing them to live free of worries from many common allergies. With MyAllergyPal, patients can record each entry of their treatment without the need to worry about paper records.  The app helps patients to track their medication progress, check allergens in their city, and browse allergen sources relevant to their life. Implementation was built using React Native, a mobile development framework that uses Javascript and React, resulting in simple, cross-platform support.
 

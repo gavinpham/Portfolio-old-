@@ -8,7 +8,9 @@ hover_catch: "hcd dev pro"
 img: refillwise.jpg
 sections:
   intro: |
-    How might we improve the patient journey with prescription medications? Let’s rethink the way people access their pharmaceuticals and give help to those who really need it.
+    How might we improve the patient journey with prescription medications?
+
+    Let’s rethink the way people access their pharmaceuticals and give help to those who really need it.
   long: |
     During this project, I collaborated with a team of fellow MADI students to ideate improvements to the patient journey with prescription medications. Over the course of our primary research and interviewing sessions, we realized that price transparency and diminishing trust in the pharmaceutical system had pushed patients into a corner.  Through further ideation, we landed on a two-part solution.
 

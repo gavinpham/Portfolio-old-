@@ -7,17 +7,18 @@ tag: menu_accessible
 
 <div class="contact-container">
 	<div class="contact-content-container">
-		<div>
+		<div class="contact-cascade-entry hidden">
 			Personal: <br class="render-on-desktop"><a class="light-weight" href="mailto:gpham@smu.edu">gpham@smu.edu</a>
 			<!-- TODO: Add a neat hover animation for links -->
 		</div>
-		<div>
+		<div class="contact-cascade-entry hidden">
 			<br>Work: <br class="render-on-desktop"><a class="light-weight" href="mailto:gavin@hackdfw.com">gavin@hackdfw.com</a>
 		</div>
 	</div>
 	<div class="relative-container">
-		<div class="contact-image-container">
+		<div class="contact-image-container hidden">
 		  <img class="contact-image" src="{{ site.baseurl }}/assets/img/contact.jpg">
 		</div>
 	</div>
 </div>
+<script src="{{ "/assets/js/contact.js" | prepend: site.url }}"></script>

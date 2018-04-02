@@ -30,7 +30,7 @@ layout: default
 				<a data-content="{{ page.title }}" href="{{ page.url | prepend: site.baseurl }}">
 					<div class="featured-project-body-container render-on-desktop">
 						<div class="white-body">
-							{{ page.sections['intro'] | textilize }}
+							{{ page.sections['intro'] | textilize | newline_to_br}}
 						</div>
 					</div>
 					{% if page.img %}

@@ -1,11 +1,3 @@
-/* CONSTANTS */
-var DELAY = 120;		//Units: ms
-var BADGE_DELAY = 100;
-var TYPE_DELAY = 900;
-var TYPE_DELAY_LAST_ELEMENT = 600;
-var ANIMATION_DELAY = 500;
-var ANIMATION_DELAY_LONG = 2000;
-
 function show_featured_projects(){
 	$(".featured-project").each(function(i){
 		var $this = $(this);

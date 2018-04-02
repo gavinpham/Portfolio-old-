@@ -14,33 +14,49 @@ description: |
 {% for page in site.pages %} 
 	{% if page.category contains "project" %}
 		{% if page.tags contains "pro" %}
-			<div class="project-brief-container">
-				<div class="project-brief-image-container">
+		<div class="project-brief-container">
+			<div class="project-brief-image-container hidden">
+				<a data-content="{{ page.title }}" href="{{ page.url | prepend: site.baseurl }}">
 					{% if page.img %}
-					  <img class="project-image-main" src="{{ site.baseurl }}/assets/img/{{ page.img }}">
+						<img class="project-image-main" src="{{ site.baseurl }}/assets/img/{{ page.img }}">
 					{% endif %}
+				</a>
+			</div>
+			<div class="project-brief-text-container">
+				<div>
+					<h2 class="project-brief-title hidden">
+						<a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+					</h2>
+					<p class="project-brief-description hidden">
+						{{ page.sections['intro'] | textilize | newline_to_br }}
+					</p>
 				</div>
-				<div class="project-brief-text-container">
-					<div>
-						<h2 class="project-brief-title">
-							<a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-						</h2>
-						<p class="project-brief-description">
-							{{ page.sections['intro'] | textilize }}
-						</p>
-					</div>
+				<div class="project-brief-buttons flex conditional-flex-direction space-between">
 					<div class="flex">
 						{% for tag in page.tags %}
-							<a class="badge-link" href="{{ site.baseurl }}/disciplines/{{ tag }}">
-								<div class="project-brief-badge badge-{{tag}}">
-									{{ tag }}
-								</div>
-							</a>
+							{% for discipline_page in site.pages %}
+								{% if discipline_page.category contains "discipline" %}
+									{% if tag == discipline_page.tag %}
+										<a class="badge-link" href="{{ site.baseurl }}/disciplines/{{ tag }}">
+											<div class="project-brief-badge hidden badge-{{tag}}">
+												<i class="{{ discipline_page.icon }} badge-icon"></i>
+											</div>
+										</a>
+									{% endif %}
+								{% endif %}
+							{% endfor %}
 						{% endfor %}
 					</div>
+					<a class="naked-link" data-content="{{ page.title }}" href="{{ page.url | prepend: site.baseurl }}">
+						<div class="see-more-button align-center space-between hidden">
+							See More
+							<i class="fas fa-chevron-circle-right glyph"></i>
+						</div>
+					</a>
 				</div>
 			</div>
-			<hr>
+		</div>
+		<hr>
 		{% endif %}
 	{% endif %}
 {% endfor %}
