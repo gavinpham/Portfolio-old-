@@ -7,18 +7,31 @@ tag: menu_accessible
 
 {% for page in site.pages %}
 	{% if page.category contains "discipline" %}
-		<div class="flex">
+	<div class="flex conditional-flex-direction discipline-li-container">
+		<div class="discipline-text-container hidden">
+			<h3 class="discipline-title">
+				<a href="{{ page.url | prepend: site.baseurl }}">
+					{{ page.title }}
+				</a>
+			</h3>
+			<div class="conditional-render">{{ page.description }}</div>
+		</div>
+		<div class="discipline-badge-container">
 			<a class="badge-link" href="{{ site.baseurl }}/disciplines/{{ page.tag }}">
-				<div class="project-brief-badge badge-{{ page.tag }}">
-					{{ page.tag }}
+				<div class="project-brief-badge badge-{{page.tag}} hidden">
+					<i class="{{ page.icon }} badge-icon"></i>
+				</div>
+			</a>
+			<a class="naked-link" data-content="{{ page.title }}" href="{{ page.url | prepend: site.baseurl }}">
+				<div class="see-more-button align-center space-between hidden">
+					Read More
+					<i class="fas fa-chevron-circle-right glyph"></i>
 				</div>
 			</a>
 		</div>
-		<h3>
-			<a href="{{ page.url | prepend: site.baseurl }}">
-				{{ page.title }}
-			</a>
-		</h3>
-		{{ page.description }}
+	</div>
+	<hr class="discipline-hr hidden">
 	{% endif %}
 {% endfor %}
+<script src="{{ "/assets/js/projects.js" | prepend: site.url }}"></script>
+<script src="{{ "/assets/js/disciplines.js" | prepend: site.url }}"></script>

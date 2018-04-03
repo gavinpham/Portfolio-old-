@@ -9,15 +9,17 @@ $main: $black;
 $header: $black;
 $gray-1: #545454;
 $gray-2: #989898;
-$light: 		#E7EDF4;
-$blue:			#1dace6;
-$orange:		#fbae3c;
-$yellow:		#e7f150;
-$pink:			#fd4db0;
+$gray-3: #D3D3D3;
+$light: #E7EDF4;
+$blue: #1dace6;
+$orange: #fbae3c;
+$yellow: #e7f150;
+$pink: #fd4db0;
 
 //	HOVER
 $hover-opacity: 0.5;
-$hover-transition-duration: 0.15s;
+$hover-transition-duration: 0.25s;
+$hover-transition-duration-long: 0.5s;
 $hover-transition-timing-function: linear;
 
 // FONT COLORS

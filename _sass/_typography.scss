@@ -66,6 +66,32 @@ i {
 	}
 }
 
+.page-title, .project-title {
+	font-size: 2em;
+	@media (max-width: $resize-width){
+		font-size: 		1.5em;
+	}
+}
+
+.content-label {
+	color: $gray-3;
+	font-size: 2em;
+	position: absolute;
+	top: 586px;
+	font-weight: 400;
+	display: inline-block;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.content-label-mobile {
+	color: $gray-3;
+	font-size: 1em;
+	font-weight: 400;
+	margin-top: 10px;
+	margin-bottom: 0;
+}
+
 .sub-header {
 	color: $sub-header;
 	font-weight: 400;
@@ -74,8 +100,32 @@ i {
 	margin-bottom: 0;
 }
 
+.white-body {
+	color: $white;
+	font-weight: 400;
+	font-size: 0.90em;
+	line-height: 1.4;
+}
+
+.rotate {
+	/* Safari */
+	-webkit-transform: rotate(-90deg);
+	/* Firefox */
+	-moz-transform: rotate(-90deg);
+	/* IE */
+	-ms-transform: rotate(-90deg);
+	/* Opera */
+	-o-transform: rotate(-90deg);
+	/* Internet Explorer */
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
 .marginless {
 	margin: 0;
+}
+
+.naked-link,.naked-link:visited,.naked-link:hover{
+	text-decoration: none;
 }
 
 .light-weight {
@@ -84,5 +134,30 @@ i {
 
 .reference-link, .reference-link:visited, .reference-link:hover {
 	text-decoration: none;
-	padding-left: 10px;
+	padding: 0 0 0 10px;
+	font-size: 2em;
+	color: $gray-3;
+	transition: all $hover-transition-duration-long;
+	-webkit-transition: all $hover-transition-duration-long;
+	&:hover {
+		color: $gray-1;
+	}
+}
+
+.glyph {
+	font-size: 30px;
+}
+
+.footer-link, #footer-contact{
+	color: $gray-3;
+	transition: all $hover-transition-duration-long;
+	-webkit-transition: all $hover-transition-duration-long;
+	&:hover {
+		color: $gray-1;
+	}
+}
+
+#footer-contact {
+	font-weight: 400;
+	font-size: 1.2em;
 }

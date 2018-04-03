@@ -2,32 +2,40 @@
 layout: default
 ---
 
-<h2>{{ page.title }}</h2>
+<h2 class="project-title hidden">{{ page.title }}</h2>
 
 <div class="project-header-container">
-			<div class="project-header-text-container">
-				<p class="project-brief-description">
-					{{ page.sections['intro'] | textilize }}
-				</p>
-				<p class="project-details">
-					{{ content | remove: '<p>' | remove: '</p>' }}
-				</p>
-				<div class="flex">
-					{% for tag in page.tags %}
-						<a class="badge-link" href="{{ site.baseurl }}/disciplines/{{ tag }}">
-							<div class="project-brief-badge badge-{{tag}}">
-								{{ tag }}
-							</div>
-						</a>
+	<div class="project-header-text-container">
+		<div class="flex conditional-flex-direction space-between">
+			<p class="project-details hidden">
+				{{ content | remove: '<p>' | remove: '</p>' }}
+			</p>
+			<div class="flex project-badge-conditional-margins">
+				{% for tag in page.tags %}
+					{% for discipline_page in site.pages %}
+						{% if discipline_page.category contains "discipline" %}
+							{% if tag == discipline_page.tag %}
+								<a class="badge-link" href="{{ site.baseurl }}/disciplines/{{ tag }}">
+									<div class="project-brief-badge badge-{{tag}} hidden">
+										<i class="{{ discipline_page.icon }} badge-icon"></i>
+									</div>
+								</a>
+							{% endif %}
+						{% endif %}
 					{% endfor %}
-				</div>
-			</div>
-			<div class="project-brief-image-container">
-				{% if page.img %}
-				  <img class="project-image-main" src="{{ site.baseurl }}/assets/img/{{ page.img }}">
-				{% endif %}
+				{% endfor %}
 			</div>
 		</div>
-
-<div>{{ page.sections['long'] | textilize | newline_to_br }}</div>
+		<p class="project-brief-description hidden">
+			{{ page.sections['intro'] | textilize | newline_to_br }}
+		</p>
+	</div>
+	<div class="project-brief-image-container hidden">
+		{% if page.img %}
+		  <img class="project-image-main" src="{{ site.baseurl }}/assets/img/{{ page.img }}">
+		{% endif %}
+	</div>
+</div>
+<div class="project-body hidden">{{ page.sections['long'] | textilize | newline_to_br }}</div>
+<script src="{{ "/assets/js/projects.js" | prepend: site.url }}"></script>
 

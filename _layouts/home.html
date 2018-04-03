@@ -8,13 +8,15 @@ layout: default
 			<h4 class="sub-header hidden">Human-Centered Designer</h4>
 			<h4 class="sub-header hidden">Computer Scientist</h4>
 			<h4 class="sub-header hidden last">Generally A Pretty Swell Guy</h4>
+			<div class="accent-line-mobile render-on-mobile"></div>
+			<h4 class="content-label-mobile render-on-mobile hidden">Featured Projects</h4>
 		</div>
 		<div class="conditional-render">
 			{% for page in site.pages %}
 				{% if page.category contains "discipline" %}
 					<a class="badge-link" href="{{ site.baseurl }}/disciplines/{{ page.tag }}">
 							<div class="project-brief-badge badge-{{page.tag}} hidden">
-								{{ page.tag }}
+								<i class="{{ page.icon }} badge-icon"></i>
 							</div>
 					</a>
 				{% endif %}
@@ -24,8 +26,13 @@ layout: default
 	<ul class="featured-project-container">
 		{% for page in site.pages %}
 			{% if page.category contains "project" and page.category contains "featured" %}
-			<li class="featured-project hidden">
+			<li class="featured-project hidden {{ page.hover_catch }}">
 				<a data-content="{{ page.title }}" href="{{ page.url | prepend: site.baseurl }}">
+					<div class="featured-project-body-container render-on-desktop">
+						<div class="white-body">
+							{{ page.sections['intro'] | textilize | newline_to_br}}
+						</div>
+					</div>
 					{% if page.img %}
 						<img class="project-image-main" src="{{ site.baseurl }}/assets/img/{{ page.img }}">
 					{% endif %}
@@ -34,5 +41,7 @@ layout: default
 			{% endif %}
 		{% endfor %}
 	</ul>
+	<div class="accent-line render-on-desktop hidden"></div>
+	<h4 class="content-label render-on-desktop hidden">Featured Projects</h4>
 </div>
 <script src="{{ "/assets/js/home.js" | prepend: site.url }}"></script>
