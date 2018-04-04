@@ -5,6 +5,10 @@ permalink: /projects/dogs/
 category: ['project','featured']
 tags: ['hcd']
 hover_catch: "hcd"
+detial_text: "Intended Audience: "
+detail_link_text: "Rover"
+detail_link_href: "https://www.rover.com/"
+detail_timeline: "Timeline: Oct 2017 - Dec 2017"
 img: dogs.jpg
 sections:
   intro: |
@@ -13,12 +17,9 @@ sections:
     What technology and household innovations exist in this space?
 
     How does dog ownership change when owners become real parents?
-  long: |
-    I went into research armed with questions and interviewing techniques, eager to learn about the secret life of these pets. After a few months of recurring research and synthesis, I was able to formulate a handful of “How Might We” statements and a brief presentation to convey their meaning. These statements were created as a means to aide in further ideation for Rover.
-
-    Check out the presentation below.
 
 ---
 
-Theoretical Client: [Rover](https://www.rover.com/)  
-Timeline: Oct 2017 - Dec 2017
+I went into research armed with questions and interviewing techniques, eager to learn about the secret life of these pets. After a few months of recurring research and synthesis, I was able to formulate a handful of “How Might We” statements and a brief presentation to convey their meaning. These statements were created as a means to aide in further ideation for Rover.
+
+Want to see the presentation deck that I prepared for them? [Check out the slide deck PDF](http://www.gavinpham.com/assets/slides/Rover-Presentation.pdf).
