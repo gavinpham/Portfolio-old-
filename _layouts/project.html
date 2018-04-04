@@ -8,7 +8,10 @@ layout: default
 	<div class="project-header-text-container">
 		<div class="flex conditional-flex-direction space-between">
 			<p class="project-details hidden">
-				{{ content | remove: '<p>' | remove: '</p>' }}
+				{{ page.detial_text }}
+				<a href="{{ page.detail_link_href }}">{{ page.detail_link_text }}</a>
+				<br>
+				{{ page.detail_timeline }}
 			</p>
 			<div class="flex project-badge-conditional-margins">
 				{% for tag in page.tags %}
@@ -36,6 +39,8 @@ layout: default
 		{% endif %}
 	</div>
 </div>
-<div class="project-body hidden">{{ page.sections['long'] | textilize | newline_to_br }}</div>
+<div class="project-body hidden">
+	{{ content }}
+</div>
 <script src="{{ "/assets/js/projects.js" | prepend: site.url }}"></script>
 

@@ -20,19 +20,48 @@
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	justify-content: space-between;
-	margin: 50px 0 0 0;
+	justify-content: space-around;
+	margin: 0 0 0 0;
 	@media (max-width: $resize-width){
 		width: 100%;
-		margin: 0;
 		flex-direction: row;
+		align-items: flex-end;
+		justify-content: space-between;
 	}
 	.see-more-button {
-		margin: 0;
+		margin: 50px 0 0 0;
 		@media (max-width: $resize-width){
+			margin: 0 0 0 0;
 			border: 3px solid $gray-2;
 			color: $gray-2;
 
+		}
+	}
+	@media (min-width: $resize-width){
+		.project-brief-badge {
+			width: 200px;
+			height: 200px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.badge-icon {
+			font-size: 112px;
+		}
+		.badge-dev {
+			padding: 0 0 0 6px;
+			border-color: $blue;
+		}
+
+		.badge-hcd {
+			padding: 0 0 10px 0;
+			border-color: $orange;
+		}
+
+		.badge-pro {
+			padding: 8px 15px 0 0;
+			border-color: $pink;
 		}
 	}
 }
