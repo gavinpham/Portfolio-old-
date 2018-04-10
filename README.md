@@ -10,5 +10,5 @@ I highly recommend both, they've been incredibly rewarding to work with.
 
 Let me know what you think: gpham@smu.edu
 
-With Love,
+With Love,  
 Gavin Pham
