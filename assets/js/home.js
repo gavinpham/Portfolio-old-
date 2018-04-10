@@ -59,34 +59,34 @@ $(window).on("load", function() {
 
 $(".featured-project").hover(function(){
 	var $main_hovered = $(this);
-	if($main_hovered.hasClass("dev")) {
-		$(".project-brief-badge").each(function(){
-			var $curr_badge = $(this);
-			if($curr_badge.hasClass("badge-dev")){
-				$curr_badge.toggleClass("dev-forced-hovered");
-			} else {
-				$curr_badge.toggleClass("faded-badge");
-			}
-		});
-	}
-	if($main_hovered.hasClass("hcd")) {
-		$(".project-brief-badge").each(function(){
-			var $curr_badge = $(this);
-			if($curr_badge.hasClass("badge-hcd")){
-				$curr_badge.toggleClass("hcd-forced-hovered");
-			} else {
-				$curr_badge.toggleClass("faded-badge");
-			}
-		});
-	}
-	if($main_hovered.hasClass("pro")) {
-		$(".project-brief-badge").each(function(){
-			var $curr_badge = $(this);
-			if($curr_badge.hasClass("badge-pro")){
-				$curr_badge.toggleClass("pro-forced-hovered");
-			} else {
-				$curr_badge.toggleClass("faded-badge");
-			}
-		});
-	}
+	$(".project-brief-badge").each(function(){
+		var $badge = $(this);
+		var shouldHover = false;
+		//Does this project use the discipline of the current badge?
+		if($main_hovered.hasClass("hcd") && $badge.hasClass("badge-hcd")){
+			//If it does, force hover on the badge
+			$badge.toggleClass("hcd-forced-hovered");
+			shouldHover = true;
+		} 
+		if($main_hovered.hasClass("dev") && $badge.hasClass("badge-dev")){
+			$badge.toggleClass("dev-forced-hovered");
+			shouldHover = true;
+		}
+		if($main_hovered.hasClass("pro") && $badge.hasClass("badge-pro")){
+			$badge.toggleClass("pro-forced-hovered");
+			shouldHover = true;
+		}
+		if($main_hovered.hasClass("dsn") && $badge.hasClass("badge-dsn")){
+			$badge.toggleClass("dsn-forced-hovered");
+			shouldHover = true;
+		}
+		if($main_hovered.hasClass("biz") && $badge.hasClass("badge-biz")){
+			$badge.toggleClass("biz-forced-hovered");
+			shouldHover = true;
+		}
+		if (!(shouldHover)){
+			//If it does not, fade the badge to gray
+			$badge.toggleClass("faded-badge");
+		}
+	});
 });

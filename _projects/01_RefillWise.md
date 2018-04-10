@@ -3,8 +3,8 @@ layout: project
 title:  "It's Okay To Talk About Cost"
 permalink: /projects/refillwise/
 category: ['project','featured']
-tags: ['hcd','dev', 'pro']
-hover_catch: "hcd dev pro"
+tags: ['hcd','dev','pro','dsn']
+hover_catch: "hcd dev pro dsn"
 detial_text: "Client: "
 detail_link_text: "Refillwise"
 detail_link_href: "https://www.refillwise.com"

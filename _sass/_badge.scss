@@ -59,9 +59,26 @@
 	}
 }
 
-.faded-badge {
-	border-color: $gray-3;
-	color: $gray-3;
+.badge-dsn {
+	color: $yellow;
+	border-color: $yellow;
+	@media (min-width: $resize-width){
+		border-color: $gray-2;
+		&:hover{
+			border-color: $yellow;
+		}
+	}
+}
+
+.badge-biz {
+	color: $green;
+	border-color: $green;
+	@media (min-width: $resize-width){
+		border-color: $gray-2;
+		&:hover{
+			border-color: $green;
+		}
+	}
 }
 
 .dev-forced-hovered {
@@ -72,4 +89,15 @@
 }
 .pro-forced-hovered {
 	border-color: $pink;
+}
+.dsn-forced-hovered {
+	border-color: $yellow;
+}
+.biz-forced-hovered {
+	border-color: $green;
+}
+
+.faded-badge {
+	border-color: $gray-3;
+	color: $gray-3;
 }
