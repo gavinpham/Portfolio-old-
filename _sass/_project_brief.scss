@@ -1,38 +1,64 @@
 .project-brief-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: row;
-	flex: 1;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
 	width: 100%;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	@media (max-width: $resize-width){
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 	}
 }
 
 .project-brief-image-container {
-	flex: 1 0 auto;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 0 auto;
+	        flex: 1 0 auto;
 	max-width: 33%;
 	overflow: hidden;
 	vertical-align: bottom;
 	border-radius: 5px;
+	-o-transition: all $hover-transition-duration;
 	transition: all $hover-transition-duration;
 	-webkit-transition: all $hover-transition-duration;
-	transition-timing-function: ease;
-	box-shadow: 0 3px 6px rgba(4, 25, 54, .2), 0 3px 6px rgba(4, 25, 54, .19);
+	-webkit-transition-timing-function: ease;
+	     -o-transition-timing-function: ease;
+	        transition-timing-function: ease;
+	-webkit-box-shadow: 0 3px 6px rgba(4, 25, 54, .2), 0 3px 6px rgba(4, 25, 54, .19);
+	        box-shadow: 0 3px 6px rgba(4, 25, 54, .2), 0 3px 6px rgba(4, 25, 54, .19);
 	@media (max-width: $resize-width){
 		max-width: 100%;
 	}
 	@media (min-width: $resize-width){
 		&:hover{
-			box-shadow: 0 20px 25px rgba(4, 25, 54, .2), 0 20px 25px rgba(4, 25, 54, .19);
+			-webkit-box-shadow: 0 20px 25px rgba(4, 25, 54, .2), 0 20px 25px rgba(4, 25, 54, .19);
+			        box-shadow: 0 20px 25px rgba(4, 25, 54, .2), 0 20px 25px rgba(4, 25, 54, .19);
 		}
 	}
 }
 
 .project-brief-text-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	padding: 0px 0px 0px 50px;
 	@media (max-width: $resize-width){
 		padding: 10px 0px 0px 0px;
@@ -47,9 +73,12 @@
 	}
 	@media (min-width: $resize-width){
 		a {
+			-o-transition: opacity $hover-transition-duration;
 			transition: opacity $hover-transition-duration;
 			-webkit-transition: opacity $hover-transition-duration;
-			transition-timing-function: ease;
+			-webkit-transition-timing-function: ease;
+			     -o-transition-timing-function: ease;
+			        transition-timing-function: ease;
 		}
 		a:hover, a:hover:after, a:hover:before  {
 			opacity: 0.5;
@@ -66,13 +95,19 @@
 }
 
 .project-brief-buttons {
-	align-items: flex-end;
+	-webkit-box-align: end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
 	@media (max-width: $resize-width){
-		align-items: flex-start;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
 	}
 }
 
 .see-more-button {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	color: $black;
 	border-radius: 5px;
@@ -82,9 +117,12 @@
 	padding: 20px 20px 20px 20px;
 	margin: 10px 0 0px 0;
 	font-size: 1.2em;
+	-o-transition: all $hover-transition-duration;
 	transition: all $hover-transition-duration;
 	-webkit-transition: all $hover-transition-duration;
-	transition-timing-function: ease;
+	-webkit-transition-timing-function: ease;
+	     -o-transition-timing-function: ease;
+	        transition-timing-function: ease;
 	@media (max-width: $resize-width){
 		margin: 25px 0px 0px 0px;
 	}
@@ -102,5 +140,6 @@ hr {
     margin-top: 40px;
     border-style: solid;
     border-width: 0.5px;
-    box-shadow: 0px 3px 7px rgba(4, 25, 54, .1);
+    -webkit-box-shadow: 0px 3px 7px rgba(4, 25, 54, .1);
+            box-shadow: 0px 3px 7px rgba(4, 25, 54, .1);
 }

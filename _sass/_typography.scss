@@ -45,9 +45,15 @@ time {
 
 i {
 	color: $main;
+	-webkit-transition-property: opacity;
+	-o-transition-property: opacity;
 	transition-property: opacity;
-	transition-duration: $hover-transition-duration;
-	transition-timing-function: $hover-transition-timing-function;
+	-webkit-transition-duration: $hover-transition-duration;
+	     -o-transition-duration: $hover-transition-duration;
+	        transition-duration: $hover-transition-duration;
+	-webkit-transition-timing-function: $hover-transition-timing-function;
+	     -o-transition-timing-function: $hover-transition-timing-function;
+	        transition-timing-function: $hover-transition-timing-function;
 
 	&:hover {
 		opacity: $hover-opacity;
@@ -142,6 +148,7 @@ i {
 	padding: 0 0 0 10px;
 	font-size: 2em;
 	color: $gray-3;
+	-o-transition: all $hover-transition-duration-long;
 	transition: all $hover-transition-duration-long;
 	-webkit-transition: all $hover-transition-duration-long;
 	&:hover {
@@ -155,6 +162,7 @@ i {
 
 .footer-link, #footer-contact{
 	color: $gray-3;
+	-o-transition: all $hover-transition-duration-long;
 	transition: all $hover-transition-duration-long;
 	-webkit-transition: all $hover-transition-duration-long;
 	&:hover {

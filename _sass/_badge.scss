@@ -11,9 +11,15 @@
 	line-height: 60px;
 	text-transform: uppercase;
 	font-weight: 600;
+	-webkit-transition-property: all;
+	-o-transition-property: all;
 	transition-property: all;
-	transition-duration: $hover-transition-duration;
-	transition-timing-function: $hover-transition-timing-function;
+	-webkit-transition-duration: $hover-transition-duration;
+	     -o-transition-duration: $hover-transition-duration;
+	        transition-duration: $hover-transition-duration;
+	-webkit-transition-timing-function: $hover-transition-timing-function;
+	     -o-transition-timing-function: $hover-transition-timing-function;
+	        transition-timing-function: $hover-transition-timing-function;
 }
 
 .badge-icon {
