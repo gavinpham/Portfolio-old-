@@ -1,0 +1,65 @@
+---
+layout: discipline
+title: "Graphic Design"
+permalink: /disciplines/dsn
+category: ['discipline']
+tag: "dsn"
+icon: "fas fa-paint-brush"
+description: |
+    I believe that graphic design plays a critical role to innovations in the modern world. The end result of a prototype, website, interface: all require graphic design to create a positive experience for the end user. For this reason, graphic design consistently finds its way into projects and programs that I produce.
+    <br><br>
+    The adobe suite is my bread and butter. The grid is a lot more than a clever way of designing city streets. Poor kerning makes me judge brands. Photoshop is pure wizadry of pixel manipulation, and don't even get me started on the math behind the wand tool. 
+cta: |
+    Check out some of my projects below that involve graphic design.
+
+---
+<hr>
+{% for page in site.pages %}
+	{% if page.category contains "project" %}
+		{% if page.tags contains "dsn" %}
+		<div class="project-brief-container">
+			<div class="project-brief-image-container hidden">
+				<a data-content="{{ page.title }}" href="{{ page.url | prepend: site.baseurl }}">
+					{% if page.img %}
+						<img class="project-image-main" src="{{ site.baseurl }}/assets/img/{{ page.img }}">
+					{% endif %}
+				</a>
+			</div>
+			<div class="project-brief-text-container">
+				<div>
+					<h2 class="project-brief-title hidden">
+						<a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+					</h2>
+					<p class="project-brief-description hidden">
+						{{ page.sections['intro'] | textilize | newline_to_br }}
+					</p>
+				</div>
+				<div class="project-brief-buttons flex conditional-flex-direction space-between">
+					<div class="flex">
+						{% for tag in page.tags %}
+							{% for discipline_page in site.pages %}
+								{% if discipline_page.category contains "discipline" %}
+									{% if tag == discipline_page.tag %}
+										<a class="badge-link" href="{{ site.baseurl }}/disciplines/{{ tag }}">
+											<div class="project-brief-badge hidden badge-{{tag}}">
+												<i class="{{ discipline_page.icon }} badge-icon"></i>
+											</div>
+										</a>
+									{% endif %}
+								{% endif %}
+							{% endfor %}
+						{% endfor %}
+					</div>
+					<a class="naked-link" data-content="{{ page.title }}" href="{{ page.url | prepend: site.baseurl }}">
+						<div class="see-more-button align-center space-between hidden">
+							See More
+							<i class="fas fa-chevron-circle-right glyph"></i>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<hr>
+		{% endif %}
+	{% endif %}
+{% endfor %}

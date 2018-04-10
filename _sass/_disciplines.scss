@@ -53,15 +53,20 @@
 			padding: 0 0 0 6px;
 			border-color: $blue;
 		}
-
 		.badge-hcd {
 			padding: 0 0 10px 0;
 			border-color: $orange;
 		}
-
 		.badge-pro {
 			padding: 8px 15px 0 0;
 			border-color: $pink;
+		}
+		.badge-dsn {
+			border-color: $yellow;
+		}
+		.badge-biz {
+			padding: 0 0 10px 0;
+			border-color: $green;
 		}
 	}
 }

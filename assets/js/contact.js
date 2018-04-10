@@ -9,12 +9,12 @@ function show_contact_body(){
 }
 
 function show_contact_image(){
-	$(".contact-image-container").each(function(i){
+	$(".contact-content-container").each(function(i){
 		var $this = $(this);
 		setTimeout(() => {
 			$this.removeClass("hidden");
 			$this.addClass("animation-appear-from-bottom");
-		}, DELAY_LONG * i);
+		}, DELAY * i);
 	});
 }
 
