@@ -22,7 +22,9 @@
 @include keyframes(animation-appear){
     from {
         opacity:    0;
-        transform:  translate(30px);
+        -webkit-transform:  translate(30px);
+            -ms-transform:  translate(30px);
+                transform:  translate(30px);
     }
     to {
         opacity:    1;
@@ -35,7 +37,9 @@
     }
     to {
         opacity:    0;
-        transform:  translateY(-20px);
+        -webkit-transform:  translateY(-20px);
+            -ms-transform:  translateY(-20px);
+                transform:  translateY(-20px);
     }
 }
 
@@ -56,9 +60,16 @@
 }
 
 .navigation-list {
+    display:            -webkit-box;
+    display:            -ms-flexbox;
     display:            flex;
-    flex-direction:     row-reverse;
-    justify-content:    space-between;
+    -webkit-box-orient:     horizontal;
+    -webkit-box-direction:     reverse;
+        -ms-flex-direction:     row-reverse;
+            flex-direction:     row-reverse;
+    -webkit-box-pack:    justify;
+        -ms-flex-pack:    justify;
+            justify-content:    space-between;
     overflow:           hidden;
     height:             0px;
 }
@@ -69,9 +80,16 @@
 }
 
 #menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
 }
 
 /* Fixed Navigation Bar */
@@ -81,6 +99,8 @@ header {
     padding: 0px 15px;
     text-align: center;
     margin: 50px 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -92,7 +112,8 @@ aside {
     width: 100%;
     z-index: 2;
     border-bottom: 1px solid lighten($light, 30%);
-    box-shadow: 0px 3px 6px rgba(4, 25, 54, .1);
+    -webkit-box-shadow: 0px 3px 6px rgba(4, 25, 54, .1);
+            box-shadow: 0px 3px 6px rgba(4, 25, 54, .1);
     div {
         h1 {
             line-height: .1;
@@ -108,23 +129,40 @@ aside {
         margin: 0;
         padding: 0;
         list-style: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        width: 130px; //TODO: Formalize arbitrary width
-        flex-direction: column;
-        justify-content: right;
-        align-items: flex-start;
+        width: 130px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: right;
+            -ms-flex-pack: right;
+                justify-content: right;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
             li {
                 width: 130px;
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                flex-direction: row-reverse;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: reverse;
+                    -ms-flex-direction: row-reverse;
+                        flex-direction: row-reverse;
                 a {
                     width: 130px;
                     padding: 20px;
                     text-decoration: none;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
                     font-family: $font-style;
                     line-height: 20px;
-                    box-shadow: 0;
+                    -webkit-box-shadow: 0;
+                            box-shadow: 0;
                     border-radius: 10px;
                     &:hover,&:active {
                         background: $header;
@@ -141,4 +179,3 @@ aside {
         clear: both;
     }
 }
-

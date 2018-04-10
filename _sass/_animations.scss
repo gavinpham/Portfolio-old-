@@ -41,7 +41,9 @@
 .typewriter {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   white-space: nowrap; /* Keeps the content on a single line */
-  animation: 
+  -webkit-animation:
+    typing 0.7s steps(25, end),;
+          animation:
     typing 0.7s steps(25, end),
 }
 
@@ -49,11 +51,21 @@
 .typewriter-slow {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   white-space: nowrap; /* Keeps the content on a single line */
-  animation:
+  -webkit-animation:
+    typing 2s steps(17, end),;
+          animation:
     typing 2s steps(17, end),
 }
 
 /* The typing effect */
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 @keyframes typing {
   from {
     width: 0;
@@ -65,7 +77,9 @@
 
 @include keyframes(animation-appear-from-bottom){
   0% {
-    transform: translateY(20px);
+    -webkit-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+            transform: translateY(20px);
     opacity: 0;
   }
   100% {
@@ -79,7 +93,9 @@
 
 @include keyframes(animation-appear-from-top-slow){
   0% {
-    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+            transform: translateY(-20px);
     opacity: 0;
   }
   100% {
@@ -93,7 +109,9 @@
 
 @include keyframes(animation-appear-from-bottom-slow){
   0% {
-    transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+            transform: translateY(30px);
     opacity: 0;
   }
   100% {
@@ -137,10 +155,10 @@
 
 
 @include keyframes(animation-badge-entrance){
-  0% {transform: translateY(15px);}
-  50%, 100% {transform: translateY(0);}
-    30% {transform: translateY(-20px);}
-    80% {transform: translateY(-5px);}
+  0% {-webkit-transform: translateY(15px);-ms-transform: translateY(15px);transform: translateY(15px);}
+  50%, 100% {-webkit-transform: translateY(0);-ms-transform: translateY(0);transform: translateY(0);}
+    30% {-webkit-transform: translateY(-20px);-ms-transform: translateY(-20px);transform: translateY(-20px);}
+    80% {-webkit-transform: translateY(-5px);-ms-transform: translateY(-5px);transform: translateY(-5px);}
 }
 
 .animation-badge-entrance{

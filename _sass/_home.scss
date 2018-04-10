@@ -1,8 +1,14 @@
 .home-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	//TODO: Find a better resizing dimension for tablets
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
 }
 
 .featured-project-container {
@@ -10,18 +16,32 @@
 	margin: 0;
 	padding: 0;
 
-	flex: 1 1 auto;
+	-webkit-box-flex: 1;
+
+	    -ms-flex: 1 1 auto;
+
+	        flex: 1 1 auto;
 	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 
 	li + li {
 		margin: 0px 0px 0px 40px;
 	}
 
 	@media (max-width: $resize-width){
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 
 		li + li {
 			margin: 20px 0px 0px 0px;
@@ -30,17 +50,21 @@
 }
 
 .featured-project {
-	flex: 1 1 auto;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 1 auto;
+	        flex: 1 1 auto;
 	position: relative;
 	border-radius: 5px;
 	overflow: hidden;
-	box-shadow: 0 3px 6px 0 rgba(4, 25, 54, .2), 0 3px 6px 0 rgba(4, 25, 54, .19);
+	-webkit-box-shadow: 0 3px 6px 0 rgba(4, 25, 54, .2), 0 3px 6px 0 rgba(4, 25, 54, .19);
+	        box-shadow: 0 3px 6px 0 rgba(4, 25, 54, .2), 0 3px 6px 0 rgba(4, 25, 54, .19);
 	@media (min-width: $resize-width){
 		a {
 			border-radius: 5px;
 			&:after, &:before {
 			    position:absolute;
 			    opacity:0;
+			    -o-transition: all 0.5s;
 			    transition: all 0.5s;
 			    -webkit-transition: all 0.5s;
 			}
@@ -58,7 +82,8 @@
 			    padding:4px 10px;
 			    text-align:center;
 			    background:$main;
-			    box-sizing:border-box;
+			    -webkit-box-sizing:border-box;
+			            box-sizing:border-box;
 			    -moz-box-sizing:border-box;
 			}
 			&:hover:after, &:hover:before {
@@ -77,9 +102,11 @@
 	z-index: 1;
 	padding: 40px 20px 10px 20px;
 	opacity: 0;
+	-o-transition: all 0.5s;
 	transition: all 0.5s;
 	-webkit-transition: all 0.5s;
-	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	   text-overflow: ellipsis;
 }
 
 .project-image-main-info{
@@ -89,8 +116,13 @@
 
 .sub-header-container {
 	margin: 25px 0 25px 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
 
 .accent-line{
