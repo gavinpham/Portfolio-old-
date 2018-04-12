@@ -83,7 +83,7 @@ i {
 	color: $gray-3;
 	font-size: 2em;
 	position: absolute;
-	top: 586px;
+	bottom: 45px;
 	font-weight: 400;
 	display: inline-block;
 	margin-top: 0;
@@ -160,7 +160,7 @@ i {
 	font-size: 30px;
 }
 
-.footer-link, #footer-contact{
+.footer-link, #footer-contact {
 	color: $gray-3;
 	-o-transition: all $hover-transition-duration-long;
 	transition: all $hover-transition-duration-long;
