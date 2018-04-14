@@ -59,7 +59,7 @@ sections:
 			The shade is, surprisinglyn, just two IKEA mixing bowls. I had originally planned to weld the two bowls together, but I realized that clear packing tape affixed on the inside actually provided the same security without marring the stainless steel. By avoiding welding, the end result was far cleaner than I had anticipated.
 		</div>
 		<div class="reduced-size-on-desktop-container-double shadowed">
-			<img class="scaling-image" src="{{ site.baseurl }}/assets/img/IMG_5118.jpg">
+			<img class="scaling-image" src="{{ site.baseurl }}/assets/img/lamp_shade.jpg">
 		</div>
 	</div>
 </div>
@@ -76,7 +76,7 @@ sections:
 			Based on the original design insights, the through hole allows for two adults to stick a broomstick inside the opening and use that to lift up the very heavy base. The base itself weighs around 140 lbs.
 		</div>
 		<div class="reduced-size-on-desktop-container-double shadowed">
-			<img class="scaling-image" src="{{ site.baseurl }}/assets/img/IMG_5120.jpg">
+			<img class="scaling-image" src="{{ site.baseurl }}/assets/img/lamp_counterweight.jpg">
 		</div>
 	</div>
 </div>
@@ -152,7 +152,7 @@ sections:
 * * *
 
 <div class="centered-column-container">
-	<h4 class="marginless">Project Poster</h4>
+	<h4 class="marginless">Cutting the Shade</h4>
 	<br>
 	<div class="split-column-container">
 		<div class="reduced-size-on-desktop-container-double">
