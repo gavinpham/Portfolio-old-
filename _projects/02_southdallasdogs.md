@@ -22,7 +22,7 @@ In 2016, a woman was killed by a pack of roaming dogs in South Dallas. This proj
 
 I found what my team needed through Dallas OpenData, a freely accessible repository of public data in Dallas County. Reports from Dallas Animal Services contained thousands of entries detailing bites, attacks, and citations given for loose and roaming dogs. __By filtering the raw data for homes with multiple loose dog citations, I generated a list of 37 verified “high-impact” dog owners.__
 
-<img src="../../assets/img/box-gif.gif" class="project-body-image"/>
+<img src="../../assets/img/box-gif-resized.gif" class="project-body-image"/>
  
 So, we decided to flip our system. __We couldn’t expect these users to voluntarily come to us, we needed to go to them.__ Our solution took the form of a mailed package of dog food and carefully worded information cards. __The DogBox__ addressed inaccurate and harmful beliefs to create positive behavior change. More than an educational campaign, it was a carefully designed experience that created an opportunity for new information to be received amicably by a high-impact user. 
 
