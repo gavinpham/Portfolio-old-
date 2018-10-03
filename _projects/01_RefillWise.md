@@ -5,7 +5,7 @@ permalink: /projects/refillwise/
 category: ['project','featured']
 tags: ['hcd','dev','pro','dsn']
 hover_catch: "hcd dev pro dsn"
-detial_text: "Client: "
+detial_text: "Academic Client: "
 detail_link_text: "Refillwise"
 detail_link_href: "https://www.refillwise.com"
 detail_timeline: "Timeline: Aug 2017 - Dec 2017"
