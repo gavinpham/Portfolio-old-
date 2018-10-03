@@ -28,10 +28,12 @@ So, we decided to flip our system. __We couldn’t expect these users to volunta
 
 The SPCA is currently overlooking an implementation of the system at scale using the following design principles:
 
-___Aim for the user with the most need instead of the user who is most willing.___
+___1. Aim for the user with the most need instead of the user who is most willing.___
 
-___Create an easy to engage experience for people who have other burdens.___
+___2. Create an easy to engage experience for people who have other burdens.___
 
-___Focus on behavior by gently correcting misconceptions.___
+___3. Focus on behavior by gently correcting misconceptions.___
 
-___Include what the community considers to be most important.___
+___4. Include what the community considers to be most important.___
+
+For a more detailed scope of the project, [click here to view the PDF booklet](http://www.gavinpham.com/assets/slides/The-Neighbor-Across-the-Street.pdf).
